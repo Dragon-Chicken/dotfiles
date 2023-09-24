@@ -22,6 +22,8 @@ All packages can be installed with pacman
 
 If dotfiles already exist please replace them
 
+Colour palette used: https://github.com/morhetz/gruvbox#dark-mode-1
+
 # Installation
 After you have installed all of the Dependencies you can install the dotfiles
 

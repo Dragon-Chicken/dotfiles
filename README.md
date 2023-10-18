@@ -3,8 +3,8 @@
 1. [qtile](https://qtile.org/)
 
    some widgets require dependencies, here they are
-   1. [Volime widget](https://docs.qtile.org/en/stable/manual/ref/widgets.html#volume)
-   2. [StatusNotifier widger](https://docs.qtile.org/en/stable/manual/ref/widgets.html#statusnotifier)
+   1. [Volume widget](https://docs.qtile.org/en/stable/manual/ref/widgets.html#volume)
+   2. [StatusNotifier widget](https://docs.qtile.org/en/stable/manual/ref/widgets.html#statusnotifier)
 2. [rofi](https://github.com/davatorium/rofi)
 3. [xorg/X](https://www.x.org/wiki/)
 4. [lf](https://github.com/gokcehan/lf)

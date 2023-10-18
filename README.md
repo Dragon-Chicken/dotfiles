@@ -43,13 +43,13 @@ make directories if they don't already exist
 
 `mkdir /home/{user}/.config/nitrogen`
 
-copy and paste/replace dotfiles
-
 cd into the location where you cloned the dotfiles
 
 rename `xinitrc` to `.xinitrc`
 
 `cp xinitrc .xinitrc`
+
+copy paste dotfiles
 
 `cp .xinitrc /home/{user}/`
 

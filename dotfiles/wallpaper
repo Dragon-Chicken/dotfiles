@@ -1,0 +1,3 @@
+#! /bin/sh
+chosen=$(ls /home/ethan/Pictures/wallpapers | rofi -dmenu)
+nitrogen --save --set-zoom-fill /home/ethan/Pictures/wallpapers/$chosen

@@ -27,7 +27,7 @@ Colour palette used: https://github.com/morhetz/gruvbox#dark-mode-1
 # Installation
 After you have installed all of the Dependencies you can install the dotfiles
 
-Download the dotfiles
+Download the dotfiles using `git`
 
 `git clone https://github.com/Dragon-Chicken/dotfiles`
 
@@ -40,6 +40,8 @@ make directories if they don't already exist
 `mkdir /home/{user}/.config/qtile`
 
 `mkdir /home/{user}/.config/rofi`
+
+`mkdir /home/{user}/.config/nitrogen`
 
 copy and paste/replace dotfiles
 
@@ -58,3 +60,5 @@ rename `xinitrc` to `.xinitrc`
 `cp config.py /home/{user}/.config/qtile/`
 
 `cp config.rasi /home/{user}/.config/rofi`
+
+`cp wallpaper /home/{user}/.config/nitrogen`

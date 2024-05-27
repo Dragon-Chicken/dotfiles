@@ -35,13 +35,15 @@ Download the dotfiles using `git`
 
 make directories if they don't already exist
 
-`mkdir /home/{user}/.config/alacritty/`
+`mkdir /home/{user}/.config/alacritty`
 
 `mkdir /home/{user}/.config/lf`
 
 `mkdir /home/{user}/.config/qtile`
 
 `mkdir /home/{user}/.config/rofi`
+
+`mkdir /home/{user}/.config/rofi/powermenu`
 
 `mkdir /home/{user}/.config/nitrogen`
 
@@ -53,15 +55,17 @@ rename `xinitrc` to `.xinitrc`
 
 copy paste dotfiles
 
-`cp .xinitrc /home/{user}/`
+`cp .xinitrc /home/{user}`
 
-`cp alacritty.yml /home/{user}/.config/alacritty/`
+`cp alacritty.yml /home/{user}/.config/alacritty`
 
-`cp lfrc /home/{user}/.config/lf/`
+`cp lfrc /home/{user}/.config/lf`
 
-`cp config.py /home/{user}/.config/qtile/`
+`cp config.py /home/{user}/.config/qtile`
 
 `cp config.rasi /home/{user}/.config/rofi`
+
+`cp powermenu /home/{user}/.config/rofi/powermenu`
 
 `cp wallpaper /home/{user}/.config/nitrogen`
 
@@ -69,4 +73,4 @@ copy paste dotfiles
 
 to find the firefox profiles directory open firefox and type `about:profiles` into the search box
 
-it should look something like this `/home/{user}/.mozilla/firefox/msr13i0i.default/chrome/`
+it should look something like this `/home/{user}/.mozilla/firefox/msr13i0i.default/chrome`

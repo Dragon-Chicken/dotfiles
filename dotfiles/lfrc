@@ -7,12 +7,14 @@ set icons true
 
 cmd open ${{
 	case "$f" in
-	*.txt) vim "$f";;
-	*.conf) vim "$f";;
-	*.yml) vim "$f";;
+	*.txt) nvim "$f";;
+	*.conf) nvim "$f";;
+	*.yml) nvim "$f";;
 	*.png) nsxiv "$f" &;;
 	*.jpeg) nsxiv "$f" &;;
 	*.jpg) nsxiv "$f" &;;
+  *.c) nvim "$f" &;;
+  *.py) nvim "$f" &;;
 	*) echo "not able to open file, if the file can be opened please add it to '.conf/lf/lfrc'";;
 	esac
 }}
@@ -41,7 +43,7 @@ cmd trash ${{
 # keymap
 
 # open stuff
-map e $vim "$f"
+map e $nvim "$f"
 map p $nsxiv "$f"
 
 # quit

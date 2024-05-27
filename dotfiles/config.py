@@ -157,7 +157,7 @@ keys = [
     Key([mod, "control"], "q", lazy.shutdown(), desc="Shutdown Qtile"),
     # Rofi
     Key([mod], "a", lazy.spawn("rofi -show drun"), desc="Spawn Rofi"),
-    Key([mod], "w", lazy.spawn("bash /home/ethan/.config/nitrogen/wallpaper"), desc="wallpaper sellect"),
+    Key([mod], "w", lazy.spawn("bash ~/.config/nitrogen/wallpaper"), desc="wallpaper sellect"),
     # Sound
     Key([], "XF86AudioMute", lazy.spawn("amixer set Master toggle")),
     Key([], "XF86AudioLowerVolume", lazy.spawn("amixer set Master 1%- unmute")),

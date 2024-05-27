@@ -68,7 +68,7 @@
   #
   # Window opacity as a floating point number from `0.0` to `1.0`.
   # The value `0.0` is completely transparent and `1.0` is opaque.
-  #opacity: 1.0
+  #opacity: 0.8
 
   # Startup Mode (changes require restart)
   #
@@ -122,52 +122,52 @@
   #multiplier: 3
 
 # Font configuration
-#font:
+font:
   # Normal (roman) font face
-  #normal:
+  normal:
     # Font family
     #
     # Default:
     #   - (macOS) Menlo
     #   - (Linux/BSD) monospace
     #   - (Windows) Consolas
-    #family: monospace
+    family: JetBrainsMono Nerd Font
 
     # The `style` can be specified to pick a specific face.
-    #style: Regular
+    style: Regular
 
   # Bold font face
-  #bold:
+  bold:
     # Font family
     #
     # If the bold family is not specified, it will fall back to the
     # value specified for the normal font.
-    #family: monospace
+    family: JetBrainsMono Nerd Font
 
     # The `style` can be specified to pick a specific face.
-    #style: Bold
+    style: Bold
 
   # Italic font face
-  #italic:
+  italic:
     # Font family
     #
     # If the italic family is not specified, it will fall back to the
     # value specified for the normal font.
-    #family: monospace
+    family: JetBrainsMono Nerd Font
 
     # The `style` can be specified to pick a specific face.
-    #style: Italic
+    style: Italic
 
   # Bold italic font face
-  #bold_italic:
+  bold_italic:
     # Font family
     #
     # If the bold italic family is not specified, it will fall back to the
     # value specified for the normal font.
-    #family: monospace
+    family: JetBrainsMono Nerd Font
 
     # The `style` can be specified to pick a specific face.
-    #style: Bold Italic
+    style: Bold Italic
 
   # Point size
   #size: 11.0
@@ -200,7 +200,7 @@
 colors:
   # Default colors
   primary:
-    background: '#1d2021'
+    background: '#141414'
     foreground: '#fbf1c7'
 
     # Bright and dim foreground colors
@@ -343,7 +343,7 @@ colors:
   # Whether or not `window.opacity` applies to all cell backgrounds or only to
   # the default background. When set to `true` all cells will be transparent
   # regardless of their background color.
-  #transparent_background_colors: false
+  transparent_background_colors: true
 
 # Bell
 #

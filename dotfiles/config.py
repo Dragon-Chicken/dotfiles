@@ -42,6 +42,82 @@ right = "right"
 shuffle = "control"
 grow = "shift"
 
+"""colours=[
+        ["#282828", "#282828"],  # 0 black
+        ["#d65d0e", "#d65d0e"],  # 1 orange
+        ["#98971a", "#98971a"],  # 2 green
+        ["#d79921", "#d79921"],  # 3 yellow
+        ["#458588", "#458588"],  # 4 blue
+        ["#b16286", "#b16286"],  # 5 purple
+        ["#689d6a", "#689d6a"],  # 6 aqua
+        ["#a89984", "#a89984"],  # 7 gray
+        ["#1d2021", "#1d2021"],  # 8 blacker black?
+        ]"""
+
+colours = [
+        ["",""],
+        ["",""],
+        ["",""],
+        ["",""],
+        ["",""],
+        ["",""],
+        ["",""],
+        ["",""],
+        ["",""],
+        ["",""],
+        ["",""],
+        ]
+
+with open('/home/ethan/.config/colours', 'r') as file:
+    colours[0][0] = "#" + file.readline().strip()
+    colours[0][1] = colours[0][0]
+    colours[1][0] = "#" + file.readline().strip()
+    colours[1][1] = colours[1][0]
+    colours[2][0] = "#" + file.readline().strip()
+    colours[2][1] = colours[2][0]
+    colours[3][0] = "#" + file.readline().strip()
+    colours[3][1] = colours[3][0]
+    colours[4][0] = "#" + file.readline().strip()
+    colours[4][1] = colours[4][0]
+    colours[5][0] = "#" + file.readline().strip()
+    colours[5][1] = colours[5][0]
+    colours[6][0] = "#" + file.readline().strip()
+    colours[6][1] = colours[6][0]
+    colours[7][0] = "#" + file.readline().strip()
+    colours[7][1] = colours[7][0]
+    colours[8][0] = "#" + file.readline().strip()
+    colours[8][1] = colours[8][0]
+    colours[9][0] = "#" + file.readline().strip()
+    colours[9][1] = colours[9][0]
+    colours[10][0] = "#" + file.readline().strip()
+    colours[10][1] = colours[10][0]
+    """for line in file:
+        colours += ["#" + line, "#" + line]"""
+
+roficonfig = ""
+backupconfig = ""
+
+with open('/home/ethan/.config/rofi/config.rasi', 'r') as file:
+    for line in file:
+        backupconfig += line
+        vars = ['bg:', 'bg-alt:', 'bg-selected:', 'fg:', 'fg-alt:']
+        vals = {'bg:':colours[0][0], 'bg-alt:':colours[9][0],
+                'bg-selected:':colours[9][0], 'fg:':colours[3][0], 'fg-alt:':colours[7][0]}
+        didfind = False
+        for var in vars:
+            if var in line:
+                roficonfig += f"\t{var} {vals[var]};\n"
+                didfind = True
+        
+        if didfind == False:
+            roficonfig += f"{line}"
+
+with open('/home/ethan/.config/rofi/backupconfig', 'w') as file:
+    file.write(backupconfig)
+
+with open('/home/ethan/.config/rofi/config.rasi', 'w') as file:
+    file.write(roficonfig)
+
 keys = [
     # A list of available commands that can be bound to keys can be found
     # at https://docs.qtile.org/en/latest/manual/config/lazy.html
@@ -89,14 +165,46 @@ keys = [
     # Apps
     Key([mod], "t", lazy.spawn(terminal), desc="Launch terminal"),
     Key([mod], "f", lazy.spawn("firefox"), desc="Launch firefox"),
-    Key([mod], "d", lazy.spawn("discord"), desc="Launch discord"),
-    Key([mod], "e", lazy.spawn(terminal + " -e lf"), desc="Launch file manager"),
+    #Key([mod], "d", lazy.spawn("discord"), desc="Launch discord"),
+    Key([mod], "e", lazy.spawn("lf"), desc="Launch file manager"),
     Key([], "print", lazy.spawn("scrot -o -F 'screenshot.jpg'")),
-    Key(["control"], "print", lazy.spawn("scrot -s -o -F 'screenshot.jpg'"))
+    Key(["control"], "print", lazy.spawn("scrot -s -o -F 'screenshot.jpg'")),
 
 ]
 
-groups = [Group(i) for i in "12345"]
+#groups = []
+#Group(i) for i in "12345"
+#group_names = ["1", "2", "3", "4", "5"]
+#group_labels = ["Dev", "Web", "Music", "Work", "Other"]
+#for i in range(len(group_names)):
+#    groups.append(Group(
+#        name=group_names[i],
+#        label=group_labels[i],
+#        ))
+groups = [
+    Group(
+        name="1",
+        label="Dev",
+    ),
+    Group(
+        name="2",
+        label="Web",
+    ),
+    Group(
+        name="3",
+        label="Music",
+        matches=[Match(wm_class="spotify")],
+    ),
+    Group(
+        name="4",
+        label="Work",
+    ),
+    Group(
+        name="5",
+        label="Other",
+        matches=[Match(wm_class="easyeffects")],
+    ),
+]
 
 for i in groups:
     keys.extend(
@@ -124,9 +232,9 @@ for i in groups:
 
 layouts = [
     # layout.Columns(border_focus_stack=["#000000", "#000000"], border_width=4),
-    layout.Columns(border_focus="#fbf1c7", border_normal="#282828", border_width=2, margin=2, margin_on_single=0),
+    layout.Columns(border_focus=colours[10][0], border_normal=colours[0][0], border_width=2, margin=2, margin_on_single=0),
     layout.Max(),
-    layout.Floating(border_focus="#fbf1c7", border_normal="#282828", border_widt=2),
+    layout.Floating(border_focus=colours[10][0], border_normal=colours[0][0], border_width=2),
     # Try more layouts by unleashing below layouts.
     # layout.Stack(num_stacks=2, border_focus="#fbf1c7", border_normal="#282828", border_width=4),
     # layout.Bsp(),
@@ -141,45 +249,43 @@ layouts = [
 ]
 
 widget_defaults = dict(
-    font="sans",
+    font="JetBrainsMono Nerd Font",
     fontsize=14,
     padding=3,
+    foreground=colours[3],
 )
 extension_defaults = widget_defaults.copy()
+
 
 screens = [
     Screen(
         bottom=bar.Bar(
             [
-                widget.CurrentLayout(foreground="#689d6a"),
-                widget.Sep(),
-                widget.GroupBox(highlight_method="text"),
-                #widget.Sep(),
-                #widget.Prompt(),
-                #widget.Sep(),
-                #widget.WindowName(),
-                widget.Spacer(length=700),
-                widget.Clock(format="%Y-%m-%d, %a, %H:%M", foreground="#689d6a"),
+                widget.CurrentLayout(),
+                widget.GroupBox(
+                    active=colours[3],
+                    inactive=colours[7],
+                    rounded=False,
+                    highlight_color=colours[0],
+                    highlight_method="line",
+                    this_current_screen_border=colours[3],
+                    ),
                 widget.Spacer(),
-                #widget.Chord(
-                    #chords_colors={
-                        #"launch": ("#ff0000", "#ffffff"),
-                    #},
-                    #name_transform=lambda name: name.upper(),
-                #),
-                #widget.TextBox("default config", name="default"),
-                #widget.TextBox("Press &lt;M-r&gt; to spawn", foreground="#d75f5f"),
-                #widget.Volume(foreground="#689d6a"),
+                widget.Clock(
+                    format="%b %a %d %H:%M",
+                    ),
+                widget.Spacer(),
                 widget.StatusNotifier(),
                 widget.Systray(),
-                widget.Volume(foreground="#689d6a"),
-                widget.Sep(),
-                widget.QuickExit(foreground="#689d6a",
-                                 default_text="logout ↪ ",
-                                 countdown_format="{} Seconds"),
+                widget.Volume(),
+                widget.TextBox(
+                    " ⏻  Power ",
+                    mouse_callbacks={
+                        'Button1':lazy.spawn("bash /home/ethan/.config/rofi/powermenu/powermenu")}
+                    ),
             ],
             24,
-            background=["1d2021"],
+            background=colours[8],
             # border_width=[2, 0, 2, 0],  # Draw top and bottom borders
             # border_color=["ff00ff", "000000", "ff00ff", "000000"]  # Borders are magenta
             ),
@@ -203,6 +309,7 @@ floating_layout = layout.Floating(
     float_rules=[
         # Run the utility of `xprop` to see the wm class and name of an X client.
         *layout.Floating.default_float_rules,
+        Match(title="wallpaper"),
         Match(wm_class="confirmreset"),  # gitk
         Match(wm_class="makebranch"),  # gitk
         Match(wm_class="maketag"),  # gitk

@@ -97,7 +97,7 @@ with open('/home/ethan/.config/colours', 'r') as file:
 roficonfig = ""
 backupconfig = ""
 
-with open('/home/ethan/.config/rofi/config.rasi', 'r') as file:
+with open('~/.config/rofi/config.rasi', 'r') as file:
     for line in file:
         backupconfig += line
         vars = ['bg:', 'bg-alt:', 'bg-selected:', 'fg:', 'fg-alt:']
@@ -112,10 +112,10 @@ with open('/home/ethan/.config/rofi/config.rasi', 'r') as file:
         if didfind == False:
             roficonfig += f"{line}"
 
-with open('/home/ethan/.config/rofi/backupconfig', 'w') as file:
+with open('~/.config/rofi/backupconfig', 'w') as file:
     file.write(backupconfig)
 
-with open('/home/ethan/.config/rofi/config.rasi', 'w') as file:
+with open('~/.config/rofi/config.rasi', 'w') as file:
     file.write(roficonfig)
 
 keys = [
@@ -281,7 +281,7 @@ screens = [
                 widget.TextBox(
                     " ⏻  Power ",
                     mouse_callbacks={
-                        'Button1':lazy.spawn("bash /home/ethan/.config/rofi/powermenu/powermenu")}
+                        'Button1':lazy.spawn("bash ~/.config/rofi/powermenu/powermenu")}
                     ),
             ],
             24,

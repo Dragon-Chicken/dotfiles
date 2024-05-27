@@ -1,4 +1,3 @@
 #! /bin/sh
 chosen=$(ls ~/Pictures/wallpapers | rofi -show -dmenu -i -window-title "Wallpaper:")
-#chosen=$(ls ~/Pictures/wallpapers | rofi -theme ~/.config/nitrogen/theme.rasi -i -window-title "Wallpaper:" -show filebrowser -filebrowser-command 'feh --bg-scale' -filebrowser-directory ~/wallpapers/)
 nitrogen --save --set-zoom-fill ~/Pictures/wallpapers/$chosen

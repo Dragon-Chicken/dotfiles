@@ -14,6 +14,7 @@
 8. [nitrogen](https://github.com/l3ib/nitrogen)
 9. [picom](https://github.com/yshui/picom)
 10. [git](https://git-scm.com/)
+11. [firefox](https://www.mozilla.org/en-US/firefox/)
 
 # Additional info
 I have installed this on Arch Linux so I don't know if it will work on other distros
@@ -62,3 +63,9 @@ copy paste dotfiles
 `cp config.rasi /home/{user}/.config/rofi`
 
 `cp wallpaper /home/{user}/.config/nitrogen`
+
+`cp userChrome.css /home/{user}/.mozilla/{firefox profiles directory}`
+
+to find the firefox profiles directory open firefox and type `about:profiles` into the search box
+
+it should look something like this `/home/{user}/.mozilla/firefox/msr13i0i.default/chrome/`

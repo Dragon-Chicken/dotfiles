@@ -9,13 +9,12 @@
 2. [rofi](https://github.com/davatorium/rofi)
 3. [xorg/X](https://www.x.org/wiki/)
 4. [lf](https://github.com/gokcehan/lf)
-5. [vim](https://www.vim.org/)
-6. [nsxiv](https://codeberg.org/nsxiv/nsxiv)
-7. [ly](https://github.com/fairyglade/ly)
-8. [nitrogen](https://github.com/l3ib/nitrogen)
-9. [picom](https://github.com/yshui/picom)
-10. [git](https://git-scm.com/)
-11. [firefox](https://www.mozilla.org/en-US/firefox/)
+5. [nsxiv](https://codeberg.org/nsxiv/nsxiv)
+6. [ly](https://github.com/fairyglade/ly)
+7. [nitrogen](https://github.com/l3ib/nitrogen)
+8. [picom](https://github.com/yshui/picom)
+9. [git](https://git-scm.com/)
+10. [firefox](https://www.mozilla.org/en-US/firefox/)
 
 # Additional info
 I have installed this on Arch Linux so I don't know if it will work on other distros

@@ -1,5 +1,3 @@
-![screenshot](https://github.com/Dragon-Chicken/dotfiles/assets/70321204/b57ca5f0-d422-4e97-8dda-7d8808e94537)
-
 # Dependencies
 1. [qtile](https://qtile.org/)
 

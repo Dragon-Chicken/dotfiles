@@ -5,7 +5,9 @@ install:
 	stow picom
 	stow polybar
 	stow scripts
+	stow st
 	stow sxwm
+	stow xinitrc
 	stow zsh
 
 uninstall:
@@ -15,5 +17,7 @@ uninstall:
 	stow -D picom
 	stow -D polybar
 	stow -D scripts
+	stow -D st
 	stow -D sxwm
+	stow -D xinitrc
 	stow -D zsh

@@ -1,0 +1,7 @@
+#!/bin/sh
+
+picom &
+
+polybar -r &
+
+feh --bg-fill ~/Pictures/wallpapers/girl\ on\ balcony\ windy.png &

@@ -6,6 +6,7 @@
 - sxwm
 - zsh
 - [st](https://github.com/gh0stzk/st-terminal) (modified version of st)
+- zoxide
 - scrot
 - stow
 

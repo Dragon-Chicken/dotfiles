@@ -9,6 +9,6 @@
   "nvim-web-devicons": { "branch": "master", "commit": "b8221e42cf7287c4dcde81f232f58d7b947c210d" },
   "render-markdown.nvim": { "branch": "main", "commit": "475d3ad8cae486b0df6fc6050cf5b5ea1de42db8" },
   "tokyonight.nvim": { "branch": "main", "commit": "e63c42a42b11cd6225f009dd949b9ee0fccc15ef" },
-  "vague.nvim": { "branch": "main", "commit": "316bb10c1b3bf297cb1f043464226d136c29e426" },
+  "vague.nvim": { "branch": "main", "commit": "ac4ecdaa7c82ec806bfa6bfdf6ca71f44af51dc7" },
   "yuck.vim": { "branch": "master", "commit": "9b5e0370f70cc30383e1dabd6c215475915fe5c3" }
 }

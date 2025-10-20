@@ -13,7 +13,7 @@ move_window_amount      : 50
 resize_window_amount    : 50
 snap_distance           : 5
 motion_throttle         : 180 # Set to screen refresh rate for smoothest motions
-should_float            : "pcmanfm", "obs"
+should_float            : "pcmanfm", "obs", "code-oss"
 new_win_focus           : true
 warp_cursor             : true
 floating_on_top         : true

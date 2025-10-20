@@ -40,4 +40,9 @@ alias tree='tree -a --gitignore'
 alias grep='grep --color=auto'
 alias ff='clear && fastfetch'
 
+eval "$(zoxide init zsh)"
+function cd() {
+    z "$@"
+}
+
 fastfetch

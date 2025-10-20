@@ -5,18 +5,26 @@
 - polybar (going to be replaced by eww)
 - SXWM
 - zsh
+- stow
 
 # Installation
 1. Download the dependencies
-1. Clone this repo
+2. Go your home directory \
+You __need__ to clone the repo into your home directory for it to work
+```sh
+cd ~/
+```
+3. Clone this repo
 ```sh
 git clone https://github.com/Dragon-Chicken/dotfiles.git
 ```
-3. Install
+4. Install
 ```sh
 make # or `make install`
 ```
-4. Uninstall
+
+# Uninstall
+To uninstall, simply run:
 ```sh
 make uninstall
 ```

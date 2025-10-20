@@ -1,5 +1,5 @@
 eww -> ~/.config/eww/
-nvim -> ~/.config/nvim/
+//nvim -> ~/.config/nvim/
 picom -> ~/.config/picom/
 polybar -> ~/.config/polybar/
 scripts -> ~/.config/scripts/

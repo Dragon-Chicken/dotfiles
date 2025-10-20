@@ -1,0 +1,37 @@
+; right
+(defwidget workspaces []
+  (label :text "workspaces"))
+(defwidget window []
+  (label :text "window"))
+
+; center
+
+; left
+(defwidget volume []
+  (label :text "volume"))
+(defwidget time []
+  (label :text "time"))
+
+(defwindow bar
+  :monitor 0
+  :geometry (geometry
+              :x "0%"
+              :y "-0.5%"
+              :width "40%"
+              :height "3.5%"
+              :anchor "bottom center")
+  :stacking "fg"
+  :reserve (struts :distance "4%" :side "bottom")
+  :windowtype "dock"
+  :wm-ignore false
+
+  (centerbox :orientation "h"
+    (box :orientation "h" :space-evenly false :spacing 10 :halign "start"
+      (workspaces)
+      (window))
+    (box :orientation "h" :space-evenly false :spacing 10 :halign "center"
+      (label :text "nothing will go here"))
+    (box :orientation "h" :space-evenly false :spacing 10 :halign "end"
+      (volume)
+      (time))
+    ))

@@ -1,3 +1,0 @@
-#! /bin/sh
-chosen=$(ls ~/Pictures/wallpapers | rofi -show -dmenu -i -window-title "Wallpaper:")
-nitrogen --save --set-zoom-fill ~/Pictures/wallpapers/$chosen

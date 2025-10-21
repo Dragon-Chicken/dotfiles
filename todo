@@ -1,5 +1,5 @@
 sxwm config.h change for the workspace names
-st config
 .xinitrc
 fstab
 dmenu
+notification

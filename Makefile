@@ -1,6 +1,7 @@
 install:
 	cd ~/dotfiles/
 	stow eww
+	stow fastfetch
 	stow nvim
 	stow picom
 	stow polybar
@@ -13,6 +14,7 @@ install:
 uninstall:
 	cd ~/dotfiles/
 	stow -D eww
+	stow -D fastfetch
 	stow -D nvim
 	stow -D picom
 	stow -D polybar

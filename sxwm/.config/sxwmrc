@@ -1,7 +1,7 @@
 # Colour Themes:
-focused_border_colour    : #fbf1c7
-unfocused_border_colour  : #282828
-swap_border_colour       : #fbf1c7
+focused_border_colour    : #c4a7e7
+unfocused_border_colour  : #26233a
+swap_border_colour       : #c4a7e7
 
 # General Options:
 gaps                    : 40
@@ -13,7 +13,7 @@ move_window_amount      : 50
 resize_window_amount    : 50
 snap_distance           : 5
 motion_throttle         : 180 # Set to screen refresh rate for smoothest motions
-should_float            : "pcmanfm", "obs", "code-oss"
+should_float            : "pcmanfm", "obs", "code-oss", "vesktop", "feh"
 new_win_focus           : true
 warp_cursor             : true
 floating_on_top         : true

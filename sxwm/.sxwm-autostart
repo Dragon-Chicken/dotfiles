@@ -4,4 +4,6 @@ picom &
 
 polybar -r &
 
+dunst &
+
 feh --bg-fill ~/Pictures/wallpapers-edited/girl\ on\ balcony\ windy.png &

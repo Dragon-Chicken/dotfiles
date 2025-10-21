@@ -1,6 +1,6 @@
 install:
 	cd ~/dotfiles/
-	stow eww
+	stow dunst
 	stow fastfetch
 	stow nvim
 	stow picom
@@ -13,7 +13,7 @@ install:
 
 uninstall:
 	cd ~/dotfiles/
-	stow -D eww
+	stow -D dunst
 	stow -D fastfetch
 	stow -D nvim
 	stow -D picom

@@ -1,5 +1,4 @@
-sxwm config.h change for the workspace names
-.xinitrc
 fstab
 dmenu
-notification
+kew
+icons?

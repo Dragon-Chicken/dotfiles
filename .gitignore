@@ -1,1 +1,10 @@
 .git
+
+#st
+st
+st.o
+x.o
+rowcolumn_diacritics_helpers.o
+hb.o
+graphics.o
+boxdraw.o

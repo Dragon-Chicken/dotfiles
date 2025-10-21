@@ -1,37 +1,41 @@
-; right
-(defwidget workspaces []
-  (label :text "workspaces"))
-(defwidget window []
-  (label :text "window"))
-
-; center
-
-; left
-(defwidget volume []
-  (label :text "volume"))
-(defwidget time []
-  (label :text "time"))
-
 (defwindow bar
   :monitor 0
-  :geometry (geometry
-              :x "0%"
-              :y "-0.5%"
-              :width "40%"
-              :height "3.5%"
-              :anchor "bottom center")
-  :stacking "fg"
-  :reserve (struts :distance "4%" :side "bottom")
+  :stacking "overlay"
   :windowtype "dock"
-  :wm-ignore false
+  :geometry (geometry :x "0%"
+                      :y "-0.5%"
+                      :width "40%"
+                      :height "3.5%"
+                      :anchor "bottom center")
+  :reserve (struts :side "bottom" :distance "48px")
+  (bar))
 
+(defwidget bar []
   (centerbox :orientation "h"
     (box :orientation "h" :space-evenly false :spacing 10 :halign "start"
       (workspaces)
-      (window))
-    (box :orientation "h" :space-evenly false :spacing 10 :halign "center"
-      (label :text "nothing will go here"))
+      (window_name))
+    (box :orientation "h" :space-evenly false :spacing 10 :halign "center")
     (box :orientation "h" :space-evenly false :spacing 10 :halign "end"
       (volume)
-      (time))
+      (datetime))
+  )
+)
+
+(defwidget workspaces []
+  (box :class "workspaces"
+    :orientation "h"
+    :space-evenly true
+    :halign "start"
+    :spacing 10
+    (button "test")
     ))
+
+(defwidget window_name []
+  (label :text "window name"))
+
+(defwidget volume []
+  (label :text "volume"))
+
+(defwidget datetime []
+  (label :text "datetime"))

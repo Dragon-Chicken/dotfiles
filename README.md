@@ -1,8 +1,7 @@
 # Dependencies
-- eww
 - nvim
 - picom
-- polybar (going to be replaced by eww)
+- polybar
 - sxwm
 - zsh
 - [st](https://github.com/gh0stzk/st-terminal) (modified version of st)

@@ -1,10 +1,10 @@
 # Dependencies
-- nvim
-- picom
-- polybar
 - sxwm
-- zsh
+- polybar
+- picom
+- nvim
 - [st](https://github.com/gh0stzk/st-terminal) (modified version of st)
+- zsh
 - zoxide
 - scrot
 - stow

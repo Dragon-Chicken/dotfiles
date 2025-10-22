@@ -38,6 +38,11 @@ bind : mod + a : "rofi -normal-window -show drun"
 bind : Print : "~/.config/scripts/scrot-sel.sh"
 bind : ctrl + Print : "~/.config/scripts/scrot-ful.sh"
 
+# Volume
+bind : XF86AudioRaiseVolume : "amixer set Master 5%+"
+bind : XF86AudioLowerVolume : "amixer set Master 5%-"
+bind : XF86AudioMute : "amixer set Master toggle"
+
 # Window Management:
 call : mod + q : close_window
 call : mod + c : centre_window

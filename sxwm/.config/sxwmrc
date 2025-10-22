@@ -13,7 +13,7 @@ move_window_amount      : 50
 resize_window_amount    : 50
 snap_distance           : 5
 motion_throttle         : 180 # Set to screen refresh rate for smoothest motions
-should_float            : "pcmanfm", "obs", "code-oss", "vesktop", "feh"
+should_float            : "pcmanfm", "obs", "code-oss", "vesktop", "feh", "rofi"
 new_win_focus           : true
 warp_cursor             : true
 floating_on_top         : true
@@ -31,7 +31,8 @@ mod_key : super
 # Application Launchers:
 bind : mod + Return : "st"
 bind : mod + b : "firefox"
-bind : mod + a : "dmenu_run"
+#bind : mod + a : "dmenu_run"
+bind : mod + a : "rofi -normal-window -show drun"
 
 # Screenshot stuff
 bind : Print : "~/.config/scripts/scrot-sel.sh"

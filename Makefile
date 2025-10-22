@@ -5,6 +5,7 @@ install:
 	stow nvim
 	stow picom
 	stow polybar
+	stow rofi
 	stow scripts
 	stow st
 	stow sxwm
@@ -18,6 +19,7 @@ uninstall:
 	stow -D nvim
 	stow -D picom
 	stow -D polybar
+	stow -D rofi
 	stow -D scripts
 	stow -D st
 	stow -D sxwm

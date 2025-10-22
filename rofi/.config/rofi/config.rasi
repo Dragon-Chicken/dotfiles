@@ -1,0 +1,91 @@
+configuration {
+  // General
+  mode: "drun,window";
+	font: "Maple Mono NF CN 12";
+  show-icons: false;
+
+  display-drun: "";
+  display-window: "";
+  display-ssh: "";
+
+  drun-display-format: "{name}";
+  location: 0;
+
+  scroll-method: 1;
+
+  //keyboard shortcuts
+  kb-cancel: "Escape,Control+g,Control+bracketleft,Super_L";
+  kb-secondary-copy: "Control+w"; //  swapping these two
+  kb-clear-line: "Control+c"; //      so that ctrl+c clears search
+}
+
+@theme "/dev/null"
+
+* {
+	bg: #191724;
+	bg-alt: #21202e;
+	bg-selected: #6e6a86;
+
+	fg: #c4a7e7;
+	fg-alt: #e0def4;
+
+  // these don't work with picom :/
+  // borders are done through the wm
+  border: 0;
+  margin: 0;
+  padding: 0;
+  spacing: 0;
+}
+
+window {
+  width: 20%;
+  background-color: @bg;
+}
+
+element {
+  padding: 8 12;
+  background-color: transparent;
+  text-color: @fg-alt;
+}
+
+element selected {
+  text-color: @fg;
+  background-color: @bg-selected;
+}
+
+element-text {
+  background-color: transparent;
+  text-color: inherit;
+  vertical-align: 0.5;
+}
+
+entry {
+  padding: 12;
+  background-color: @bg-alt;
+  text-color: @fg;
+}
+
+inputbar {
+  children: [prompt, entry];
+  background-color: @bg;
+}
+
+listview {
+  background-color: @bg;
+  columns: 1;
+  lines: 10;
+}
+
+mainbox {
+  children: [inputbar, listview];
+  background-color: @bg;
+}
+
+prompt {
+  enabled: true;
+  padding: 12 0 0 12;
+  background-color: @bg-alt;
+  text-color: @fg;
+}
+
+/* vim: ft=sass

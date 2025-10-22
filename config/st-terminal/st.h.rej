@@ -1,0 +1,37 @@
+--- st.h
++++ st.h
+@@ -33,7 +33,6 @@ enum glyph_attribute {
+ 	ATTR_WRAP       = 1 << 8,
+ 	ATTR_WIDE       = 1 << 9,
+ 	ATTR_WDUMMY     = 1 << 10,
+-	ATTR_SIXEL      = 1 << 11,
+ 	ATTR_BOLD_FAINT = ATTR_BOLD | ATTR_FAINT,
+ };
+ 
+@@ -109,17 +108,6 @@ typedef struct {
+ 	char state;
+ } TCursor;
+ 
+-typedef struct _ImageList {
+-	struct _ImageList *next, *prev;
+-	unsigned char *pixels;
+-	void *pixmap;
+-	int width;
+-	int height;
+-	int x;
+-	int y;
+-	int should_delete;
+-} ImageList;
+-
+ /* Internal representation of the screen */
+ typedef struct {
+ 	int row;      /* nb row */
+@@ -138,8 +126,6 @@ typedef struct {
+ 	int icharset; /* selected charset for sequence */
+ 	int numlock; /* lock numbers in keyboard */
+ 	int *tabs;
+-	ImageList *images;     /* sixel images */
+-	ImageList *images_alt; /* sixel images for alternate screen */
+ } Term;
+ 
+ /* Purely graphic info */

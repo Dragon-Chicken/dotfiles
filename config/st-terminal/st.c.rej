@@ -1,0 +1,152 @@
+--- st.c
++++ st.c
+@@ -35,7 +35,6 @@ char *argv0;
+ 
+ #include "win.h"
+ #include "st.h"
+-#include "sixel.h"
+ 
+ #if   defined(__linux)
+  #include <pty.h>
+@@ -210,7 +208,6 @@ Term term;
+ Selection sel;
+ int cmdfd;
+ pid_t pid;
+-sixel_state_t sixel_st;
+ char **opt_cmd  = NULL;
+ char *opt_class = NULL;
+ char *opt_embed = NULL;
+@@ -1011,7 +1008,6 @@ void
+ treset(void)
+ {
+ 	uint i;
+-	ImageList *im;
+ 
+ 	term.c = (TCursor){{
+ 		.mode = ATTR_NULL,
+@@ -1050,12 +1043,9 @@ void
+ tswapscreen(void)
+ {
+ 	Line *tmp = term.line;
+-	ImageList *im = term.images;
+ 
+ 	term.line = term.alt;
+ 	term.alt = tmp;
+-	term.images = term.images_alt;
+-	term.images_alt = im;
+ 	term.mode ^= MODE_ALTSCREEN;
+ 	tfulldirt();
+ }
+@@ -1077,13 +1066,6 @@ tscrolldown(int orig, int n)
+ 		term.line[i-n] = temp;
+ 	}
+ 
+-	for (im = term.images; im; im = im->next) {
+-		if (im->y < term.bot)
+-			im->y += n;
+-		if (im->y > term.bot)
+-			im->should_delete = 1;
+-	}
+-
+ 	selscroll(orig, n);
+ }
+ 
+@@ -1104,13 +1085,6 @@ tscrollup(int orig, int n)
+ 		term.line[i+n] = temp;
+ 	}
+ 
+-	for (im = term.images; im; im = im->next) {
+-		if (im->y+im->height/win.ch > term.top)
+-			im->y -= n;
+-		if (im->y+im->height/win.ch < term.top)
+-			im->should_delete = 1;
+-	}
+-
+ 	selscroll(orig, -n);
+ }
+ 
+@@ -1873,8 +1830,6 @@ strhandle(void)
+ {
+ 	char *p = NULL;
+ 	int j, narg, par;
+-	ImageList *new_image;
+-	int i;
+ 
+ 	term.esc &= ~(ESC_STR_END|ESC_STR);
+ 	strparse();
+@@ -1925,39 +1880,7 @@ strhandle(void)
+ 		xsettitle(strescseq.args[0]);
+ 		return;
+ 	case 'P': /* DCS -- Device Control String */
+-		if (IS_SET(MODE_SIXEL)) {
+-			term.mode &= ~MODE_SIXEL;
+-			new_image = malloc(sizeof(ImageList));
+-			memset(new_image, 0, sizeof(ImageList));
+-			new_image->x = term.c.x;
+-			new_image->y = term.c.y;
+-			new_image->width = sixel_st.image.width;
+-			new_image->height = sixel_st.image.height;
+-			new_image->pixels = malloc(new_image->width * new_image->height * 4);
+-			if (sixel_parser_finalize(&sixel_st, new_image->pixels) != 0) {
+-				perror("sixel_parser_finalize() failed");
+-				sixel_parser_deinit(&sixel_st);
+-				return;
+-			}
+-			sixel_parser_deinit(&sixel_st);
+-			if (term.images) {
+-				ImageList *im;
+-				for (im = term.images; im->next;)
+-					im = im->next;
+-				im->next = new_image;
+-				new_image->prev = im;
+-			} else {
+-				term.images = new_image;
+-			}
+-			for (i = 0; i < (sixel_st.image.height + win.ch-1)/win.ch; ++i) {
+-				int x;
+-				tclearregion(term.c.x, term.c.y, term.c.x+(sixel_st.image.width+win.cw-1)/win.cw, term.c.y);
+-				for (x = term.c.x; x < MIN(term.col, term.c.x+(sixel_st.image.width+win.cw-1)/win.cw); x++)
+-					term.line[term.c.y][x].mode |= ATTR_SIXEL;
+-				tnewline(1);
+-			}
+-		}
+-		return;
++		term.mode |= ESC_DCS;
+ 	case '_': /* APC -- Application Program Command */
+ 	case '^': /* PM -- Privacy Message */
+ 		return;
+@@ -2328,7 +2251,6 @@ eschandle(uchar ascii)
+ 		term.esc |= ESC_UTF8;
+ 		return 0;
+ 	case 'P': /* DCS -- Device Control String */
+-		term.esc |= ESC_DCS;
+ 	case '_': /* APC -- Application Program Command */
+ 	case '^': /* PM -- Privacy Message */
+ 	case ']': /* OSC -- Operating System Command */
+@@ -2431,18 +2353,22 @@ tputc(Rune u)
+ 		if (u == '\a' || u == 030 || u == 032 || u == 033 ||
+ 		   ISCONTROLC1(u)) {
+ 			term.esc &= ~(ESC_START|ESC_STR|ESC_DCS);
++			if (IS_SET(MODE_SIXEL)) {
++				/* TODO: render sixel */;
++				term.mode &= ~MODE_SIXEL;
++				return;
++			}
+ 			term.esc |= ESC_STR_END;
+ 			goto check_control_code;
+ 		}
+ 
+ 
+ 		if (IS_SET(MODE_SIXEL)) {
+-			if (sixel_parser_parse(&sixel_st, (unsigned char *)&u, 1) != 0)
+-				perror("sixel_parser_parse() failed");
++			/* TODO: implement sixel mode */
+ 			return;
+ 		}
+-		if (term.esc & ESC_DCS)
+-			goto check_control_code;
++		if (term.esc&ESC_DCS && strescseq.len == 0 && u == 'q')
++			term.mode |= MODE_SIXEL;
+ 
+ 		if (strescseq.len+len >= sizeof(strescseq.buf)-1) {
+ 			/*

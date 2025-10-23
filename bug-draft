@@ -1,0 +1,11 @@
+Stack windows extending off-screen
+
+
+The stack window is extending off-screen.
+I *have* modified the code but didn't touch the code that is causing this.
+
+# how to reproduce
+1. hold down `stack_increase` key bind (mod + ctrl + l)
+2. eventually it will go off-screen
+3. hold down `stack_decrease` key bind (mod + ctrl h)
+4. it will resize till it's the normal height

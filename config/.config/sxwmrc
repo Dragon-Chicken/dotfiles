@@ -6,8 +6,8 @@ swap_border_colour       : #c4a7e7
 # General Options:
 gaps                    : 40
 
-single_gaps_vertical    : 400
-single_gaps_horizontal  : 700
+single_horizontal_gap   : 700
+single_vertical_gap     : 400
 
 border_width            : 4
 master_width            : 60 # Percentage of screen width
@@ -23,7 +23,7 @@ warp_cursor             : true
 floating_on_top         : true
 new_win_master          : false
 can_swallow             : "st"
-can_be_swallowed        : "mpv", "sxiv", "feh"
+can_be_swallowed        : "mpv", "sxiv"
 start_fullscreen        : "mpv", "vlc"
 exec                    : "~/.sxwm-autostart"
 

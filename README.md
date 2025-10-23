@@ -1,7 +1,5 @@
 # Dragon Chicken's dot files
 Screenshots:
-![screenshot1](images/screenshot1.png)
-![screenshot2]()
 # Packages
 - WM: [__sxwm__](https://github.com/uint23/sxwm)
 - Bar: [__polybar__](https://github.com/polybar/polybar)

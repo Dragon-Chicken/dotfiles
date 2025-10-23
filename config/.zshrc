@@ -38,7 +38,7 @@ alias la='ls -a'
 alias lla='ls -la'
 alias tree='tree -a --gitignore'
 alias grep='grep --color=auto'
-alias ff='clear && fastfetch'
+alias ff='clear -x && fastfetch'
 
 alias fire='aafire -driver curses'
 

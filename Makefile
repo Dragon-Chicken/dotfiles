@@ -1,7 +1,7 @@
 install:
 	cd ~/dotfiles/
-	stow config
+	stow -t ~/ config
 
 uninstall:
 	cd ~/dotfiles/
-	stow -D config
+	stow -t ~/ -D config

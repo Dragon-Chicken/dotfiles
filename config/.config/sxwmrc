@@ -5,6 +5,10 @@ swap_border_colour       : #c4a7e7
 
 # General Options:
 gaps                    : 40
+
+single_gaps_vertical    : 400
+single_gaps_horizontal  : 700
+
 border_width            : 4
 master_width            : 60 # Percentage of screen width
 resize_master_amount    : 1
@@ -19,7 +23,7 @@ warp_cursor             : true
 floating_on_top         : true
 new_win_master          : false
 can_swallow             : "st"
-can_be_swallowed        : "mpv", "sxiv"
+can_be_swallowed        : "mpv", "sxiv", "feh"
 start_fullscreen        : "mpv", "vlc"
 exec                    : "~/.sxwm-autostart"
 
@@ -73,16 +77,16 @@ call : mod + h : master_decrease
 call : mod + ctrl + l : stack_increase
 call : mod + ctrl + h : stack_decrease
 
-# Keyboard Window Management
-call : mod + Up : move_win_up
-call : mod + Down : move_win_down
-call : mod + Left : move_win_left
-call : mod + Right : move_win_right
+# Keyboard Window Management << this is for floating windows
+call : mod + alt + k: move_win_up
+call : mod + alt + j: move_win_down
+call : mod + alt + h: move_win_left
+call : mod + alt + l: move_win_right
 
-call : mod + shift + Up : resize_win_up
-call : mod + shift + Down : resize_win_down
-call : mod + shift + Left : resize_win_left
-call : mod + shift + Right : resize_win_right
+call : mod + alt + shift + k: resize_win_up
+call : mod + alt + shift + j: resize_win_down
+call : mod + alt + shift + h: resize_win_left
+call : mod + alt + shift + l: resize_win_right
 
 # Gaps 
 call : mod + equal : increase_gaps
@@ -91,7 +95,7 @@ call : mod + minus : decrease_gaps
 # Floating/FullscreenRight
 call : mod + space : toggle_floating
 call : mod + shift + space : global_floating
-call : mod + shift + f : fullscreen
+call : mod + f : fullscreen
 
 # Reload Config
 call : mod + r : reload_config
@@ -123,11 +127,11 @@ workspace : mod + 4          : move 4
 workspace : mod + shift + 4  : swap 4
 workspace : mod + 5          : move 5
 workspace : mod + shift + 5  : swap 5
-#workspace : mod + 6          : move 6
-#workspace : mod + shift + 6  : swap 6
-#workspace : mod + 7          : move 7
-#workspace : mod + shift + 7  : swap 7
-#workspace : mod + 8          : move 8
-#workspace : mod + shift + 8  : swap 8
-#workspace : mod + 9          : move 9
-#workspace : mod + shift + 9  : swap 9
+workspace : mod + 6          : move 6
+workspace : mod + shift + 6  : swap 6
+workspace : mod + 7          : move 7
+workspace : mod + shift + 7  : swap 7
+workspace : mod + 8          : move 8
+workspace : mod + shift + 8  : swap 8
+workspace : mod + 9          : move 9
+workspace : mod + shift + 9  : swap 9

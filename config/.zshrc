@@ -40,6 +40,8 @@ alias tree='tree -a --gitignore'
 alias grep='grep --color=auto'
 alias ff='clear && fastfetch'
 
+alias fire='aafire -driver curses'
+
 eval "$(zoxide init zsh)"
 function cd() {
     z "$@"

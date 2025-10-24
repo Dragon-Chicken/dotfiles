@@ -30,7 +30,7 @@ git clone https://github.com/Dragon-Chicken/dotfiles.git
 cd dotfiles
 make # or `make install`
 ```
-4. You have to manually patch sxwm with [my patch](config/sxwm/sxwm.patch). \
+4. You have to manually patch sxwm with [my patch](config/sxwm/sxwm.patch) for named workspaces. \
 A YouTube tutorial on how to patch dwm (also works on sxwm): \
 https://youtu.be/qIEUBvGvvRg \
 (I can't be bothered to make a full ass script)

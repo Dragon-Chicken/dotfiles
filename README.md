@@ -17,6 +17,7 @@ I will probably rice more programs but this is what I have so far 😓
 - Fetch: [fastfetch](https://github.com/fastfetch-cli/fastfetch)
 - Notifications: [dunst](https://github.com/dunst-project/dunst)
 - Screenshot: [scrot](https://github.com/resurrecting-open-source-projects/scrot)
+- Terminal file manager: [yazi](https://github.com/sxyazi/yazi)
 - Dotfile manager: [stow](https://www.gnu.org/software/stow/manual/stow.html)
 
 # Install

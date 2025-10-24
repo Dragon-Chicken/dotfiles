@@ -3,7 +3,7 @@
 
   "logo": {
     "type": "kitty-direct",
-    "source": "~/Pictures/gowall/img2.jpg",
+    "source": "~/dotfiles/images/img2-edited.jpg",
     "width": 25,
     "height": null,
     "padding": {

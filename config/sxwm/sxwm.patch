@@ -1,0 +1,29 @@
+diff --git a/src/defs.h b/src/defs.h
+index 9ebfecb..e3c4fe5 100644
+--- a/src/defs.h
++++ b/src/defs.h
+@@ -33,15 +33,15 @@
+ 
+ #define NUM_WORKSPACES		 9
+ #define WORKSPACE_NAMES	\
+-	"1""\0"\
+-	"2""\0"\
+-	"3""\0"\
+-	"4""\0"\
+-	"5""\0"\
+-	"6""\0"\
+-	"7""\0"\
+-	"8""\0"\
+-	"9""\0"
++	"dev""\0"\
++	"web""\0"\
++	"mus""\0"\
++	"ex1""\0"\
++	"ex2""\0"\
++	"ex3""\0"\
++	"ex4""\0"\
++	"ex5""\0"\
++	"ex6""\0"
+ 
+ 
+ typedef enum { DRAG_NONE, DRAG_MOVE, DRAG_RESIZE, DRAG_SWAP } DragMode;

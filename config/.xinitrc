@@ -2,7 +2,10 @@
 
 xset -b
 
-xinput set-prop
+# why does this line break so often?
+# xinput set-prop 16 "libinput Accel Profile Enabled" 0 1 0
+# will this save it?
+xinput set-prop 16 "libinput Accel Profile Enabled" 0 1 0
 
 xsetroot -cursor_name left_ptr
 

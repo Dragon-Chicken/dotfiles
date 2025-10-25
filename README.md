@@ -4,6 +4,7 @@ I will probably rice more programs but this is what I have so far 😓
 ![screenshot1](images/screenshot1.png)
 ![screenshot2](images/screenshot2.png)
 ![screenshot3](images/screenshot3.png)
+![screenshto4](images/screenshot4.png)
 
 # Packages
 - WM: [sxwm](https://github.com/uint23/sxwm)
@@ -18,6 +19,8 @@ I will probably rice more programs but this is what I have so far 😓
 - Notifications: [dunst](https://github.com/dunst-project/dunst)
 - Screenshot: [scrot](https://github.com/resurrecting-open-source-projects/scrot)
 - Terminal file manager: [yazi](https://github.com/sxyazi/yazi)
+- Markdown viewer: [vscode](https://code.visualstudio.com)
+- Font: [maple mono](https://github.com/subframe7536/maple-font)
 - Dotfile manager: [stow](https://www.gnu.org/software/stow/manual/stow.html)
 
 # Install

@@ -23,7 +23,7 @@ warp_cursor             : true
 floating_on_top         : true
 new_win_master          : false
 can_swallow             : "st"
-can_be_swallowed        : "mpv", "sxiv"
+#can_be_swallowed        : "mpv", "sxiv"
 start_fullscreen        : "mpv", "vlc"
 exec                    : "~/.sxwm-autostart"
 

@@ -37,6 +37,7 @@ bind : mod + Return : "st"
 bind : mod + b : "firefox"
 #bind : mod + a : "dmenu_run"
 bind : mod + a : "rofi -normal-window -show drun"
+bind : mod + n : "~/.config/notes/notesel.sh"
 
 # Screenshot stuff
 bind : Print : "~/.config/scripts/scrot-sel.sh"

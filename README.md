@@ -19,6 +19,7 @@ I will probably rice more programs but this is what I have so far 😓
 - Notifications: [dunst](https://github.com/dunst-project/dunst)
 - Screenshot: [scrot](https://github.com/resurrecting-open-source-projects/scrot)
 - Terminal file manager: [yazi](https://github.com/sxyazi/yazi)
+- Note sync: [rsync](https://rsync.samba.org/)
 - Markdown viewer: [vscode](https://code.visualstudio.com)
 - Font: [maple mono](https://github.com/subframe7536/maple-font)
 - Dotfile manager: [stow](https://www.gnu.org/software/stow/manual/stow.html)

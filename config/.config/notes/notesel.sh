@@ -12,7 +12,7 @@ elif [[ $chosen = "<<sync notes>>" ]]; then
 
   # header for this log entry
   echo "-----------------
-  "$(date +"%Y%m%d-%H-%M-%S") >> ~/temp/note-logs
+"$(date +"%Y%m%d-%H-%M-%S") >> ~/temp/note-logs
 
   st -o - ~/.config/notes/syncing.sh | tee -a ~/temp/note-logs
 else

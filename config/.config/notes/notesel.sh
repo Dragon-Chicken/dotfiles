@@ -1,4 +1,4 @@
-#!/bin/sh
+#!/bin/bash
 
 chosen=$(echo \
   "<<sync notes>>

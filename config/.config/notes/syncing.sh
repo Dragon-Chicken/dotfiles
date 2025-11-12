@@ -1,5 +1,11 @@
 #!/bin/bash
 
+# scuffed ass way to check if it's on xd
+if [[ -z "$(ssh mytab 'echo hi')" ]]; then
+  echo "exiting... couldn't connect to tab"
+  exit
+fi
+
 pcdir="/home/ethan/notes"
 tabdir="~/storage/shared/Documents/notes"
 

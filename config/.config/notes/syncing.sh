@@ -9,24 +9,27 @@ fi
 pcdir="/home/ethan/notes"
 tabdir="~/storage/shared/Documents/notes"
 
-# pc add and commit changes
+echo "-----------
+tab commit:"
+ssh mytab "cd $tabdir; git add .; git commit -m 'tab added and commited from script syncing.sh'"
+
+echo "--------
+pc pull:"
+cd $pcdir
+git pull mytab:$tabdir
+
 echo "----------
 pc commit:"
 cd $pcdir
 git add .
 git commit -m "pc added and committed from script syncing.sh"
 
-echo "-----------
-tab commit:"
-ssh mytab "cd $tabdir; git add .; git commit -m 'tab added and commited from script syncing.sh'"
-
-# pull changes from tab
-echo "--------
-pc pull:"
-cd $pcdir
-git pull mytab:$tabdir
-
-# pull changes from pc
 echo "---------
 tab pull:"
 ssh mytab "cd $tabdir; git pull"
+
+# I think this is the one:
+# tab commits
+# pc pulls
+# pc commits
+# tab pulls

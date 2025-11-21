@@ -36,7 +36,7 @@ vim.opt.matchtime = 2 -- how long to show match
 vim.opt.cmdheight = 1 -- number of lines for cmd 
 vim.opt.completeopt = "fuzzy,menuone,noinsert" -- completion options
 
--- fild handling
+-- file handling
 vim.opt.undofile = true -- persistent undo
 vim.opt.autoread = true -- auto reload
 
@@ -46,6 +46,9 @@ vim.opt.iskeyword:append("-") -- does this > this-is-one-word
 --vim.opt.selection = "exclusive"
 vim.opt.mouse = "a" -- mouse for all modes
 vim.opt.clipboard:append("unnamedplus") -- use system clipboard
+
+-- folds!!!!!!!!
+--vim.opt.foldmethod = "indent"
 
 --vim.cmd [[ set noswapfile ]]
 

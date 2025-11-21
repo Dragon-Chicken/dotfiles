@@ -35,7 +35,7 @@ bindkey "^[[P" delete-char
 # aliases
 alias ls='ls --color=auto'
 alias la='ls -a'
-alias lla='ls -la'
+alias lla='ls -lha'
 alias tree='tree -a --gitignore'
 alias grep='grep --color=auto'
 alias ff='clear -x && fastfetch'

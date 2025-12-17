@@ -26,8 +26,9 @@ can_be_swallowed        : "simulide"
 start_fullscreen        : "mpv", "vlc"
 exec                    : "~/.sxwm-autostart"
 
-should_float            : "pcmanfm", "obs", "code-oss", "vesktop", "feh", "rofi", "Spotify", "obsidian"
+should_float            : "pcmanfm", "obs", "code-oss", "vesktop", "feh", "rofi", "Spotify", "obsidian", "pavucontrol"
 open_in_workspace : "Spotify" : 3
+open_in_workspace : "org.nicotine_plus.nicotine" : 4
 open_in_workspace : "easyeffects" : 4
 
 

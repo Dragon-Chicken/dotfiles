@@ -6,7 +6,7 @@ I will probably rice more programs but this is what I have so far 😓
 ![screenshot3](images/screenshot3.png)
 ![screenshto4](images/screenshot4.png)
 
-# Packages
+## Packages
 - WM: [sxwm](https://github.com/uint23/sxwm)
 - Bar: [polybar](https://github.com/polybar/polybar)
 - Compositor: [picom](https://github.com/yshui/picom)
@@ -24,7 +24,7 @@ I will probably rice more programs but this is what I have so far 😓
 - Font: [maple mono](https://github.com/subframe7536/maple-font)
 - Dotfile manager: [stow](https://www.gnu.org/software/stow/manual/stow.html)
 
-# Install
+## Install
 You should probably install my dotfiles into your home directory, otherwise some things may not work.
 1. Download the [packages](#packages) for your distro
 2. Clone this repo
@@ -36,12 +36,20 @@ git clone https://github.com/Dragon-Chicken/dotfiles.git
 cd dotfiles
 make # or `make install`
 ```
-4. You have to manually patch sxwm with [my patch](sxwm/workspace_names.patch) for named workspaces. \
+4. install st:
+[or just use these instructions](https://github.com/gh0stzk/st-terminal#installation)
+```sh
+cd ~/git-packages/st-terminal/
+sudo make clean install
+```
+5. You have to manually patch sxwm with [my patch](sxwm/workspace_names.patch) for named workspaces. \
 A YouTube tutorial on how to patch dwm (also works on sxwm): \
 https://youtu.be/qIEUBvGvvRg \
 (I can't be bothered to make a full ass script)
+6. I use "[Maple Mono](https://github.com/subframe7536/maple-font) NF CN Regular" \
+which is the bottom left option on the [releases tab](https://github.com/subframe7536/maple-font/releases)
 
-# Uninstall
+## Uninstall
 To uninstall, simply run:
 ```sh
 make uninstall

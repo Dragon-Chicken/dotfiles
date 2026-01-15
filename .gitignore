@@ -8,3 +8,6 @@ rowcolumn_diacritics_helpers.o
 hb.o
 graphics.o
 boxdraw.o
+
+# nvim lazy thingy
+lazy-lock.json

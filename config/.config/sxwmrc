@@ -24,9 +24,9 @@ new_win_master          : false
 can_swallow             : "st"
 can_be_swallowed        : "simulide"
 start_fullscreen        : "mpv", "vlc"
-exec                    : "~/.sxwm-autostart"
+exec                    : "sh '~/.sxwm-autostart'"
 
-should_float            : "pcmanfm", "obs", "code-oss", "vesktop", "feh", "rofi", "Spotify", "obsidian", "pavucontrol"
+should_float            : "pcmanfm", "obs", "code-oss", "vesktop", "feh", "rofi", "Spotify", "obsidian", "pavucontrol", "winboat-Apple Music Win"
 open_in_workspace : "Spotify" : 3
 open_in_workspace : "org.nicotine_plus.nicotine" : 4
 open_in_workspace : "easyeffects" : 4
@@ -42,11 +42,13 @@ bind : mod + Return : "st"
 bind : mod + b : "firefox"
 #bind : mod + a : "dmenu_run"
 bind : mod + a : "rofi -normal-window -show drun"
-bind : mod + n : "~/.config/notes/notesel.sh"
+bind : mod + n : "sh -c '~/.config/notes/notesel.sh'"
 
 # Screenshot stuff
-bind : Print : "~/.config/scripts/scrot-sel.sh"
-bind : ctrl + Print : "~/.config/scripts/scrot-ful.sh"
+# 0 == selection
+# 1 == fullscreen
+bind : Print : "sh -c '~/.config/scripts/scrot.sh 0'"
+bind : ctrl + Print : "sh -c '~/.config/scripts/scrot.sh 1'"
 
 # Volume
 bind : XF86AudioRaiseVolume : "amixer set Master 5%+"

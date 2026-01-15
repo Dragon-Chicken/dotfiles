@@ -2,7 +2,7 @@
 
 chosen=$(echo \
   "<<sync notes>>
-$(ls ~/notes)" | rofi -show -dmenu -i -window-title "notes: ")
+$(ls ~/notes)" | rofi -show -normal-window -dmenu -i -window-title "notes: ")
 
 if [[ -z "$chosen" ]]; then
   exit

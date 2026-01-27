@@ -74,7 +74,7 @@ static uint su_timeout = 200;
  * blinking timeout (set to 0 to disable blinking) for the terminal blinking
  * attribute.
  */
-static unsigned int blinktimeout = 500;
+static unsigned int blinktimeout = 0;
 
 /*
  * thickness of underline and bar cursors

@@ -11,3 +11,6 @@ boxdraw.o
 
 # nvim lazy thingy
 lazy-lock.json
+
+config/.vim/pack
+.netrwhist

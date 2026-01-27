@@ -48,7 +48,8 @@ vim.opt.mouse = "a" -- mouse for all modes
 vim.opt.clipboard:append("unnamedplus") -- use system clipboard
 
 -- folds!!!!!!!!
---vim.opt.foldmethod = "indent"
+vim.opt.foldmethod = "syntax"
+vim.opt.foldlevel = 99 -- to start unfolded
 
 --vim.cmd [[ set noswapfile ]]
 
@@ -73,3 +74,86 @@ vim.g.loaded_netrwPlugin = 1
 
 --nvim tree keymaps (nvim file browser)
 vim.keymap.set('n', '<c-n>', ':NvimTreeFindFileToggle<CR>')
+
+--vim.keymap.set('n', '<c-K>', ':Man<CR>')
+
+-- Set up nvim-cmp.
+local cmp = require'cmp'
+
+vim.keymap.set('n', '<S-j>', ':Man<CR>')
+
+
+cmp.setup({
+  window = {
+    -- completion = cmp.config.window.bordered(),
+    -- documentation = cmp.config.window.bordered(),
+  },
+  mapping = cmp.mapping.preset.insert({
+    ['<C-b>'] = cmp.mapping.scroll_docs(-4),
+    ['<C-f>'] = cmp.mapping.scroll_docs(4),
+    ['<C-Space>'] = cmp.mapping.complete(),
+    ['<C-e>'] = cmp.mapping.abort(),
+    ['<CR>'] = cmp.mapping.confirm({ select = true }), -- Accept currently selected item. Set `select` to `false` to only confirm explicitly selected items.
+  }),
+  sources = cmp.config.sources({
+    { name = 'nvim_lsp' },
+    -- { name = 'vsnip' }, -- For vsnip users.
+    -- { name = 'luasnip' }, -- For luasnip users.
+    -- { name = 'ultisnips' }, -- For ultisnips users.
+    -- { name = 'snippy' }, -- For snippy users.
+  }, {
+    { name = 'buffer' },
+  })
+})
+
+-- To use git you need to install the plugin petertriho/cmp-git and uncomment lines below
+-- Set configuration for specific filetype.
+--[[ cmp.setup.filetype('gitcommit', {
+  sources = cmp.config.sources({
+    { name = 'git' },
+  }, {
+    { name = 'buffer' },
+  })
+})
+require("cmp_git").setup() ]]--
+
+-- Use buffer source for `/` and `?` (if you enabled `native_menu`, this won't work anymore).
+cmp.setup.cmdline({ '/', '?' }, {
+  mapping = cmp.mapping.preset.cmdline(),
+  sources = {
+    { name = 'buffer' }
+  }
+})
+
+-- Use cmdline & path source for ':' (if you enabled `native_menu`, this won't work anymore).
+cmp.setup.cmdline(':', {
+  mapping = cmp.mapping.preset.cmdline(),
+  sources = cmp.config.sources({
+    { name = 'path' }
+  }, {
+    { name = 'cmdline' }
+  }),
+  matching = { disallow_symbol_nonprefix_matching = false }
+})
+
+-- Set up lspconfig.
+local capabilities = require('cmp_nvim_lsp').default_capabilities()
+-- Replace clangd with each lsp server you've enabled.
+vim.lsp.config('clangd', {
+  capabilities = capabilities
+})
+vim.lsp.enable('clangd')
+
+vim.lsp.enable('clangd')
+vim.lsp.config('clangd', {
+  cmd = {'clangd', '--background-index', '--clang-tidy', '--log=verbose'},
+})
+
+vim.diagnostic.config({
+  virtual_text = false,
+  virtual_lines = false,
+  signs = true,
+  --float = false,
+  update_in_insert = false,
+  severity_sort = true,
+})

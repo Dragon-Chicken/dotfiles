@@ -1,0 +1,57 @@
+! === st configuration example ===
+! Copy these to your ~/.Xresources or ~/.Xdefaults and run `xrdb -merge ~/.Xresources`
+
+! --- Fonts & Terminal ---
+st.font:                Maple Mono NF CN:style=regular:dpi=300:size=4.5:antialias=true:autohint=true
+st.termname:            st-256color
+st.borderpx:            4
+
+! --- Behavior & Performance ---
+st.alpha:               1.0
+st.tabspaces:           4
+st.blinktimeout:        0
+st.bellvolume:          0
+st.cursorstyle:         1
+st.minlatency:          2
+st.maxlatency:          33
+st.doubleclicktimeout:  300
+st.tripleclicktimeout:  600
+st.boxdraw:             1
+st.boxdraw_bold:        1
+
+! --- st colors (rose-pine) ---
+st.background:          #191724
+st.foreground:          #e0def4
+st.cursorColor:         #e0def4
+
+! Black + DarkGrey
+st.color0:              #26233a
+st.color8:              #6e6a86
+
+! DarkRed + Red
+st.color1:              #eb6f92
+st.color9:              #eb6f92
+
+! DarkGreen + Green
+st.color2:              #9ccfd8
+st.color10:             #9ccfd8
+
+! DarkYellow + Yellow
+st.color3:              #f6c177
+st.color11:             #f6c177
+
+! DarkBlue + Blue
+st.color4:              #31748f
+st.color12:             #31748f
+
+! DarkMagenta + Magenta
+st.color5:              #c4a7e7
+st.color13:             #c4a7e7
+
+! DarkCyan + Cyan
+st.color6:              #ebbcba
+st.color14:             #ebbcba
+
+! LightGrey + White
+st.color7:              #e0def4
+st.color15:             #e0def4

@@ -52,6 +52,19 @@ source ~/.vim/rosepine.vim
 let mapleader=" "
 nnoremap <leader>h :nohl<CR>
 
+"make
+autocmd QuickFixCmdPost * :copen
+
+function! MakeCompletion(A,L,P) abort
+  let l:targets = systemlist('make -qp | awk -F'':'' ''/^[a-zA-Z0-9][^$#\/\t=]*:([^=]|$)/ {split($1,A,/ /);for(i in A)print A[i]}'' | grep -v Makefile | sort -u')
+  return filter(l:targets, 'v:val =~ "^' . a:A . '"')
+endfunction
+command! -nargs=* -complete=customlist,MakeCompletion Make :make <args>
+
+"man page
+runtime ftplugin/man.vim
+set keywordprg=:Man
+
 "fileexplore
 nnoremap <C-n> :20Lexplore<CR>
 let g:netrw_banner=0
@@ -70,3 +83,11 @@ set statusline=%!Mystatusline()
 
 "lsp plugin
 source ~/.vim/lsp.vim
+
+"remove whitespaces
+fun! TrimWhitespace()
+  let l:save = winsaveview()
+  keeppatterns %s/\s\+$//e
+  call winrestview(l:save)
+endfun
+autocmd BufWrite * call TrimWhitespace()

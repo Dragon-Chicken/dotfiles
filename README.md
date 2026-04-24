@@ -1,31 +1,34 @@
 # Dragon Chicken's dotfiles
 Rose pine rice featuring Kagari Mimi \
 I will probably rice more programs but this is what I have so far 😓
+
+(images are slightly out of date)
 ![screenshot1](images/screenshot1.png)
 ![screenshot2](images/screenshot2.png)
 ![screenshot3](images/screenshot3.png)
 ![screenshto4](images/screenshot4.png)
 
 ## Packages
-- WM: [sxwm](https://github.com/uint23/sxwm)
+- WM: [neowm](https://github.com/Dragon-Chicken/neowm) (my own wm) and [sxwm](https://github.com/uint23/sxwm)
 - Bar: [polybar](https://github.com/polybar/polybar)
 - Compositor: [picom](https://github.com/yshui/picom)
 - Launcher: [rofi](https://github.com/davatorium/rofi)
-- Terminal: [st](https://github.com/gh0stzk/st-terminal) (modified version of st)
+- Terminal: [st](https://github.com/Welpyes/st) (modified version of st)
 - Shell: [zsh](https://wiki.archlinux.org/title/Zsh)
-- CD replacement: [zoxide](https://github.com/ajeetdsouza/zoxide)
-- Editor: [nvim](https://neovim.io/)
+- CD replacement: [zoxide](https://github.com/ajeetdsouza/zoxide) (it's pretty useless for me.)
+- Editor: [vim](https://www.vim.org/)
 - Fetch: [fastfetch](https://github.com/fastfetch-cli/fastfetch)
 - Notifications: [dunst](https://github.com/dunst-project/dunst)
 - Screenshot: [scrot](https://github.com/resurrecting-open-source-projects/scrot)
 - Terminal file manager: [yazi](https://github.com/sxyazi/yazi)
 - Note sync: [git](https://git-scm.com/)
+- Markdown editor: [nvim](https://neovim.io/) (my backup editor too)
 - Markdown viewer: [vscode](https://code.visualstudio.com)
 - Font: [maple mono](https://github.com/subframe7536/maple-font)
 - Dotfile manager: [stow](https://www.gnu.org/software/stow/manual/stow.html)
 
 ## Install
-You should probably install my dotfiles into your home directory, otherwise some things may not work.
+You __NEED__ to install my dotfiles into your home directory, otherwise stow will not work.
 1. Download the [packages](#packages) for your distro
 2. Clone this repo
 ```sh
@@ -37,10 +40,10 @@ cd dotfiles
 make # or `make install`
 ```
 4. install st:
-[or just use these instructions](https://github.com/gh0stzk/st-terminal#installation)
+[instruction are in readme](https://github.com/Welpyes/st#compilation)
 ```sh
-cd ~/git-packages/st-terminal/
-sudo make clean install
+cd (directory you cloned st into)
+sudo make install
 ```
 5. You have to manually patch sxwm with [my patch](sxwm/workspace_names.patch) for named workspaces. \
 A YouTube tutorial on how to patch dwm (also works on sxwm): \

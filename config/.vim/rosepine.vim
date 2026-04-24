@@ -42,15 +42,15 @@ hi! link PmenuKind Pmenu
 hi! link PmenuKindSel PmenuSel
 
 hi ColorColumn ctermfg=white ctermbg=darkred cterm=NONE
-hi Normal ctermfg=grey ctermbg=NONE cterm=NONE
-hi CursorLine ctermfg=NONE ctermbg=darkgrey cterm=NONE
+hi Normal ctermfg=white ctermbg=NONE cterm=NONE
+hi CursorLine ctermfg=NONE ctermbg=black cterm=NONE
 hi Cursor ctermfg=black ctermbg=yellow cterm=NONE
 
 hi LineNr ctermfg=cyan ctermbg=NONE cterm=NONE
 hi Folded ctermfg=black ctermbg=magenta cterm=reverse
-hi Pmenu ctermfg=grey ctermbg=darkgrey cterm=NONE
-hi PmenuMatch ctermfg=grey ctermbg=NONE cterm=bold
-hi PmenuMatchSel ctermfg=grey ctermbg=magenta cterm=bold
+hi Pmenu ctermfg=white ctermbg=black cterm=NONE
+hi PmenuMatch ctermfg=white ctermbg=NONE cterm=bold
+hi PmenuMatchSel ctermfg=white ctermbg=magenta cterm=bold
 hi PmenuSel ctermfg=white ctermbg=magenta cterm=NONE
 hi PmenuSbar ctermfg=white ctermbg=white cterm=NONE
 hi PmenuThumb ctermfg=blue ctermbg=blue cterm=NONE
@@ -67,11 +67,11 @@ hi SpellLocal ctermfg=white ctermbg=NONE cterm=underline
 hi SpellRare ctermfg=magenta ctermbg=NONE cterm=underline
 hi Title ctermfg=cyan ctermbg=NONE cterm=NONE
 
-hi Visual ctermfg=NONE ctermbg=darkgray cterm=NONE
+hi Visual ctermfg=NONE ctermbg=black cterm=NONE
 hi VisualNOS ctermfg=black ctermbg=white cterm=NONE
 
 hi StatusLine ctermfg=magenta ctermbg=black cterm=NONE
-hi StatusLineNC ctermfg=darkgray ctermbg=gray cterm=reverse
+hi StatusLineNC ctermfg=black ctermbg=white cterm=reverse
 hi StatusLineInv ctermfg=magenta ctermbg=black cterm=reverse
 hi StatusLineDiffAdd ctermfg=green ctermbg=black cterm=NONE
 hi StatusLineDiffSub ctermfg=red ctermbg=black cterm=NONE
@@ -87,7 +87,7 @@ hi Error ctermfg=red ctermbg=white cterm=reverse
 hi DiffAdd ctermfg=darkgreen ctermbg=white cterm=NONE
 hi DiffChange ctermfg=darkblue ctermbg=white cterm=NONE
 hi DiffDelete ctermfg=darkmagenta ctermbg=white cterm=NONE
-hi DiffText ctermfg=grey ctermbg=black cterm=NONE
+hi DiffText ctermfg=white ctermbg=black cterm=NONE
 
 hi Conceal ctermfg=NONE ctermbg=NONE cterm=NONE
 hi CursorColumn ctermfg=NONE ctermbg=blue cterm=NONE
@@ -114,16 +114,16 @@ hi Keyword ctermfg=magenta ctermbg=NONE cterm=NONE
 hi PreProc ctermfg=blue ctermbg=NONE cterm=NONE
 hi Type ctermfg=green ctermbg=NONE cterm=NONE
 hi Special ctermfg=green ctermbg=NONE cterm=NONE
-hi MatchParen ctermfg=NONE ctermbg=NONE cterm=bold
+hi MatchParen ctermfg=yellow ctermbg=NONE cterm=bold
 
 hi Underlined ctermfg=NONE ctermbg=NONE cterm=underline
 hi Todo ctermfg=NONE ctermbg=NONE cterm=reverse
 
 "idk what these do
-"hi Ignore ctermfg=darkgray ctermbg=NONE cterm=NONE
+"hi Ignore ctermfg=darkgrey ctermbg=NONE cterm=NONE
 "hi TitleBar ctermfg=white ctermbg=black cterm=NONE
-"hi TitleBarNC ctermfg=gray ctermbg=black cterm=NONE
-"hi ToolbarButton ctermfg=white ctermbg=darkgray cterm=NONE
+"hi TitleBarNC ctermfg=grey ctermbg=black cterm=NONE
+"hi ToolbarButton ctermfg=white ctermbg=darkgrey cterm=NONE
 "hi ToolbarLine ctermfg=NONE ctermbg=NONE cterm=NONE
 "hi debugBreakpoint ctermfg=green ctermbg=darkblue cterm=reverse
 "hi debugPC ctermfg=cyan ctermbg=darkblue cterm=reverse

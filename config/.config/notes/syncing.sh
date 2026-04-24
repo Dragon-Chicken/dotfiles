@@ -3,6 +3,7 @@
 # scuffed ass way to check if it's on xd
 if [[ -z "$(ssh mytab 'echo hi')" ]]; then
   echo "exiting... couldn't connect to tab"
+  read -p "Press ENTER to continue"
   exit
 fi
 
@@ -27,6 +28,8 @@ git commit -m "pc added and committed from script syncing.sh"
 echo "---------
 tab pull:"
 ssh mytab "cd $tabdir; git pull"
+
+read -p "Press ENTER to continue"
 
 # I think this is the one:
 # tab commits

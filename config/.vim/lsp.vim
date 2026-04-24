@@ -15,6 +15,7 @@ function! s:on_lsp_buffer_enabled() abort
   nmap <buffer> gd <plug>(lsp-definition)
   nmap <buffer> gr <plug>(lsp-references)
   nmap <buffer> J <plug>(lsp-hover)
+  nmap <buffer> gs <plug>(lsp-document-symbol-search)
   nnoremap <buffer> <expr><cf> lsp#scroll(+4)
   "nnoremap <buffer> <expr><c-f> lsp#scroll(+4)
   "nnoremap <buffer> <expr><c-d> lsp#scroll(-4)

@@ -1,0 +1,49 @@
+
+/home/ethan/.config/emacs/TAGS,0
+
+/home/ethan/.config/emacs/elpa/gruber-darker-theme-0.7/gruber-darker-theme.el,46
+(deftheme gruber-darkergruber-darker37,1581
+
+/home/ethan/.config/emacs/elpa/gruber-darker-theme-0.7/README.md,267
+# Gruber Darker #Gruber Darker4,238
+# Screenshot #Screenshot12,588
+# Installation #Installation16,660
+## Using package manager ##Using package manager21,761
+## Manual old fashioned way ##Manual old fashioned way50,1599
+# Contribution #Contribution70,2091
+
+/home/ethan/.config/emacs/elpa/gruber-darker-theme-0.7/gruber-darker-theme-autoloads.el,0
+
+/home/ethan/.config/emacs/elpa/gruber-darker-theme-0.7/gruber-darker-theme-pkg.el,124
+(define-package "gruber-darker-theme" "0.7" "Gruber Darker color theme for Emacs 24." 'nil :comm"gruber-darker-theme"2,89
+
+/home/ethan/.config/emacs/elpa/gruber-darker-theme-0.7/README-elpa,0
+
+/home/ethan/.config/emacs/elpa/gruber-darker-theme-0.7.signed,0
+
+/home/ethan/.config/emacs/elpa/gnupg/trustdb.gpg,0
+
+/home/ethan/.config/emacs/elpa/gnupg/pubring.kbx,0
+
+/home/ethan/.config/emacs/elpa/archives/nongnu/archive-contents.signed,0
+
+/home/ethan/.config/emacs/elpa/archives/nongnu/archive-contents,0
+
+/home/ethan/.config/emacs/elpa/archives/gnu/archive-contents.signed,0
+
+/home/ethan/.config/emacs/elpa/archives/gnu/archive-contents,0
+
+/home/ethan/.config/emacs/.emacs.custom.el,0
+
+/home/ethan/.config/emacs/init.el,49
+(defun create-tags (dir-name)create-tags27,594
+
+/home/ethan/.config/emacs/eln-cache/30.2-6a8b22b2/dabbrev-ed4e5147-ce6ebe7f.eln,0
+
+/home/ethan/.config/emacs/eln-cache/30.2-6a8b22b2/misearch-3d1286b0-1adf5942.eln,0
+
+/home/ethan/.config/emacs/eln-cache/30.2-6a8b22b2/mailabbrev-287b6d20-a00eb252.eln,0
+
+/home/ethan/.config/emacs/eln-cache/30.2-6a8b22b2/cl-seq-f464c4e2-fe43febc.eln,0
+
+/home/ethan/.config/emacs/eln-cache/30.2-6a8b22b2/ehelp-a1fe76fc-46b487a0.eln,0

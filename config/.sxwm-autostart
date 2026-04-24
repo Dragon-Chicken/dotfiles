@@ -6,4 +6,4 @@ polybar -r &
 
 dunst &
 
-feh --bg-fill ~/dotfiles/images/wallpaper.png &
+feh --bg-fill ~/Pictures/wallpaper &

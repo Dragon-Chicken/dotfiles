@@ -2,15 +2,12 @@
 
 xset -b
 
-# why does this line break so often?
-# xinput set-prop 16 "libinput Accel Profile Enabled" 0 1 0
-# will this save it?
-xinput set-prop 16 "libinput Accel Profile Enabled" 0 1 0
-
+xinput set-prop 14 "libinput Accel Profile Enabled" 0 1 0
 xsetroot -cursor_name left_ptr
-
 xset r rate 250 40
-
 unclutter --jitter 10 --ignore-scrolling --start-hidden --fork
+xrdb -merge ~/.Xresources
 
-exec sxwm
+exec nwm > /home/ethan/temp/nwm.temp
+#exec sxwm
+#exec openbox

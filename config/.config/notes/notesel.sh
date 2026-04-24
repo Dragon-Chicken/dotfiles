@@ -11,10 +11,11 @@ elif [[ $chosen = "<<sync notes>>" ]]; then
   mkdir -p ~/temp/
 
   # header for this log entry
-  echo "-----------------
-"$(date +"%Y%m%d-%H-%M-%S") >> ~/temp/note-logs
+  echo "
+-----------------
+"$(date +"%Y%m%d-%H:%M:%S") >> ~/temp/note-logs
 
   st -o - ~/.config/notes/syncing.sh | tee -a ~/temp/note-logs
 else
-  st $SHELL -c "cd ~/notes; nvim ~/notes/$chosen"
+  st -e $SHELL -c $shellcmd
 fi

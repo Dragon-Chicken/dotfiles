@@ -26,7 +26,7 @@ can_be_swallowed        : "simulide"
 start_fullscreen        : "mpv", "vlc"
 exec                    : "/home/ethan/.sxwm-autostart"
 
-should_float            : "pcmanfm", "obs", "code-oss", "vesktop", "feh", "rofi", "Spotify", "obsidian", "pavucontrol", "winboat-Apple Music Win"
+should_float            : "pcmanfm", "obs", "code-oss", "vesktop", "feh", "rofi", "Spotify", "obsidian", "pavucontrol", "winboat-Apple Music Win", "kicad", "KiCad"
 open_in_workspace : "Spotify" : 3
 open_in_workspace : "org.nicotine_plus.nicotine" : 4
 open_in_workspace : "easyeffects" : 4
@@ -42,6 +42,7 @@ bind : mod + Return : "st"
 bind : mod + b : "firefox"
 #bind : mod + a : "dmenu_run"
 bind : mod + a : "rofi -normal-window -show drun"
+bind : mod + w : "/home/ethan/.config/scripts/wallpaper.sh"
 bind : mod + n : "/home/ethan/.config/notes/notesel.sh"
 
 # Screenshot stuff

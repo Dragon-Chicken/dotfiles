@@ -23,7 +23,7 @@ NEWLINE=$'\n'
 PROMPT="%F{magenta}%~${NEWLINE}%n@%m > %f"
 
 # editor and stuff
-export EDITOR=nvim
+export EDITOR=vim
 export FILE_MANAGER=yazi
 
 # keybinds why tf doesn't zsh have these in by default??

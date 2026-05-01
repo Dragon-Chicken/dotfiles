@@ -2,7 +2,7 @@
 ! Copy these to your ~/.Xresources or ~/.Xdefaults and run `xrdb -merge ~/.Xresources`
 
 ! --- Fonts & Terminal ---
-st.font:                Maple Mono NF CN:style=regular:dpi=300:size=4.5:antialias=true:autohint=true
+st.font:                Iosevka Fixed Extended:style=regular:dpi=300:size=4.8:antialias=true:autohint=true
 st.termname:            st-256color
 st.borderpx:            4
 

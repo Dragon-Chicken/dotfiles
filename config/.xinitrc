@@ -8,6 +8,11 @@ xset r rate 250 40
 unclutter --jitter 10 --ignore-scrolling --start-hidden --fork
 xrdb -merge ~/.Xresources
 
-exec nwm > /home/ethan/temp/nwm.temp
-#exec sxwm
-#exec openbox
+# for audio...
+#dbus-launch --sh-syntax --exit-with-session; pipewire &
+pkill dbus-launch
+dbus-launch --auto-syntax --exit-with-x11 &
+gentoo-pipewire-launcher &
+
+#exec nwm > /home/ethan/temp/nwm.temp
+exec sxwm

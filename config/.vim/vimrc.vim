@@ -3,7 +3,8 @@ set nocompatible
 filetype plugin on
 
 "vim
-set undofile
+"set undofile
+set directory^=$HOME/.vim/swapfiles//
 set autoread
 set clipboard=unnamedplus "clipboard support (NEEDS GVIM)
 set iskeyword+=-,<,>

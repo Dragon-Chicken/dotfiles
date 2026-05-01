@@ -17,7 +17,7 @@
   },
 
   "display": {
-    "separator": "  ",
+    "separator": " ",
     "color": {
         "keys": "magenta"
     },
@@ -86,6 +86,10 @@
         "yellow": 80,
         "type": 0
       }
+    },
+    {
+        "type": "packages",
+        "keyColor": "magenta"
     },
     {
       "type": "uptime",

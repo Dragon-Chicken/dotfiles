@@ -24,12 +24,16 @@ PROMPT="%F{magenta}%~${NEWLINE}%n@%m > %f"
 
 # editor and stuff
 export EDITOR=vim
-export FILE_MANAGER=yazi
+#export FILE_MANAGER=yazi
 
 # keybinds why tf doesn't zsh have these in by default??
 # see man zshzle for all options
-bindkey "^[[H" beginning-of-line
-bindkey "^[[4~" end-of-line
+bindkey "[1~" beginning-of-line
+bindkey "[4~" end-of-line
+bindkey "[3~" delete-char
+
+bindkey '^[[H' beginning-of-line
+bindkey "[4~" end-of-line
 bindkey "^[[P" delete-char
 
 # aliases
@@ -42,9 +46,9 @@ alias ff='clear -x && fastfetch'
 
 alias fire='aafire -driver curses'
 
-eval "$(zoxide init zsh)"
-function cd() {
-    z "$@"
-}
+#eval "$(zoxide init zsh)"
+#function cd() {
+#    z "$@"
+#}
 
 fastfetch

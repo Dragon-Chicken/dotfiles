@@ -1,7 +1,7 @@
 configuration {
   // General
   mode: "drun,window";
-	font: "Maple Mono NF CN 12";
+	font: "Iosevka Fixed Extended:antialias=true 12";
   show-icons: false;
 
   display-drun: "";

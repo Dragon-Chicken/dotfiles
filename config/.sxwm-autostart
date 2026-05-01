@@ -1,9 +1,7 @@
 #!/bin/sh
 
 picom &
-
 polybar -r &
-
 dunst &
-
-feh --bg-fill ~/Pictures/wallpaper &
+#feh --bg-fill ~/Pictures/wallpaper &
+xwallpaper --focus ~/Pictures/wallpaper &

@@ -7,5 +7,5 @@ config/.vim/pack
 .netrwhist
 swapfiles
 
-emacs/auto-save-list
-emacs/eln-cache
+auto-save-list
+eln-cache
